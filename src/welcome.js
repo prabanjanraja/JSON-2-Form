@@ -60,10 +60,10 @@ export const Random2 = ({ Data }) => {
                 <td>
                     {Data.Options.map((data) => {
                         return (
-                            <div>
+                            <span>
                                 <input type="radio" id={data.DisplayValue} name={Data.Name} value={data.DisplayValue}></input>
                                 <label for={data.DisplayValue}>{data.DisplayValue}</label>
-                            </div>
+                            </span>
                         );
                     })}
                 </td>
