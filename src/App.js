@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Random } from "./welcome";
+import { Random2 } from "./welcome";
+import { InputDetails } from "./data";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Welcome to my demo project
+      <Random />
+      <form>
+        {
+          InputDetails.Attributes.map((data, key) => {
+            return (
+              <div key={key}>
+                <Random2 />
+              </div>
+            );
+          })
+        }
+        <input type="submit" value={InputDetails.ActionDispalyName}>
+        </input>
+      </form>
     </div>
   );
 }

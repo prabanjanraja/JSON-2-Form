@@ -1,4 +1,4 @@
-export const form =
+export const InputDetails =
 {
     "ActionDispalyName": "Login",
     "Attributes": [
