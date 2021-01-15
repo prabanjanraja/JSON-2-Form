@@ -9,10 +9,47 @@ export const Random = () => {
     );
 };
 
-export const Random2 = () => {
-    return (
-        <>
 
-        </>
-    )
+export const Random2 = ({ Data }) => {
+    if (Data.Type == "TextBox")
+        return (
+            <tr>
+
+                <td> {Data.Name} </td>
+
+                <td> <input type="text" name={Data.Name}></input>
+
+                </td>
+
+            </tr>
+        );
+    if (Data.Type == "SecretTextBox")
+        return (
+            <tr>
+
+                <td> {Data.Name} </td>
+
+                <td> <input type="password" name={Data.Name}></input>
+
+                </td>
+
+            </tr>
+        );
+    if (Data.Type == "Dropdown") {
+        return (
+            <tr>
+
+                <td> {Data.Name} </td>
+                <td>
+                    <select name={Data.Name} id={Data.Name} >
+                        {Data.DropdownValues.map((data) => {
+                            return (<option value={data.Value}>{data.DisplayName}</option>);
+                        })}
+                    </select>
+
+                </td>
+
+            </tr>
+        );
+    }
 }

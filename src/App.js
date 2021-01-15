@@ -9,15 +9,17 @@ function App() {
       Welcome to my demo project
       <Random />
       <form>
-        {
-          InputDetails.Attributes.map((data, key) => {
-            return (
-              <div key={key}>
-                <Random2 />
-              </div>
-            );
-          })
-        }
+        <table style={{ margin: "8% auto" }}>
+          {
+            InputDetails.Attributes.map((data, key) => {
+              return (
+                <div key={key}>
+                  <Random2 Data={data} />
+                </div>
+              );
+            })
+          }
+        </table>
         <input type="submit" value={InputDetails.ActionDispalyName}>
         </input>
       </form>
