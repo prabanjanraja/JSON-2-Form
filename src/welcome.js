@@ -11,7 +11,7 @@ export const Random = () => {
 
 
 export const Random2 = ({ Data }) => {
-    if (Data.Type == "TextBox")
+    if (Data.Type === "TextBox")
         return (
             <tr>
 
@@ -23,7 +23,7 @@ export const Random2 = ({ Data }) => {
 
             </tr>
         );
-    if (Data.Type == "SecretTextBox")
+    if (Data.Type === "SecretTextBox")
         return (
             <tr>
 
@@ -35,7 +35,7 @@ export const Random2 = ({ Data }) => {
 
             </tr>
         );
-    if (Data.Type == "Dropdown") {
+    if (Data.Type === "Dropdown") {
         return (
             <tr>
 
@@ -52,7 +52,7 @@ export const Random2 = ({ Data }) => {
             </tr>
         );
     }
-    if (Data.Type == "RadioButton") {
+    if (Data.Type === "RadioButton") {
         return (
             <tr>
 
