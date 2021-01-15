@@ -25,6 +25,20 @@ export const InputDetails =
             ],
             "Name": "UserType",
             "Type": "Dropdown"
+        },
+        {
+            "Name": "Gender",
+            "Options": [
+                {
+                    "DisplayValue": "Male",
+                    "Value": "male"
+                },
+                {
+                    "DisplayValue": "Female",
+                    "Value": "female"
+                }
+            ],
+            "Type": "RadioButton"
         }
     ]
 }

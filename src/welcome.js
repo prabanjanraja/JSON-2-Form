@@ -52,4 +52,23 @@ export const Random2 = ({ Data }) => {
             </tr>
         );
     }
+    if (Data.Type == "RadioButton") {
+        return (
+            <tr>
+
+                <td> {Data.Name} </td>
+                <td>
+                    {Data.Options.map((data) => {
+                        return (
+                            <div>
+                                <input type="radio" id={data.DisplayValue} name={Data.Name} value={data.DisplayValue}></input>
+                                <label for={data.DisplayValue}>{data.DisplayValue}</label>
+                            </div>
+                        );
+                    })}
+                </td>
+
+            </tr>
+        );
+    }
 }
